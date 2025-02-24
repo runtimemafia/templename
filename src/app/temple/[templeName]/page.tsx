@@ -1,13 +1,9 @@
 import { notFound } from "next/navigation";
 
-interface Props {
-  params: { templeName: string };
-}
+export default async function TemplePage({ params }: { params: Promise<{ templeName: string }> }) {
+  const resolvedParams = await params;
 
-export default async function TemplePage({ params }: Props) {
-  const { templeName } = await params;
+  if (!resolvedParams.templeName) return notFound();
 
-  if (!templeName) return notFound();
-
-  return <h1>Temple Page for {templeName}</h1>;
+  return <h1>Temple Page for {resolvedParams.templeName}</h1>;
 }
