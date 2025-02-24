@@ -1,10 +1,42 @@
-version: "3.8"
+version: '3.7'
 
 services:
   app:
     build: .
-    ports:
-      - "3000:3000"
     environment:
-      - NODE_ENV=production
+      NODE_ENV: production
+      COOLIFY_BRANCH: "main"
+      COOLIFY_RESOURCE_UUID: k80wwks0c4goo84k4gcs8kks
+      COOLIFY_CONTAINER_NAME: app-k80wwks0c4goo84k4gcs8kks-101105540855
+      COOLIFY_URL: 'https://templename.000000108.xyz'
+      COOLIFY_FQDN: 'templename.000000108.xyz'
     restart: always
+    container_name: app-k80wwks0c4goo84k4gcs8kks-101105540855
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.0.0-beta.390
+      - coolify.applicationId=26
+      - coolify.type=application
+      - coolify.name=app-k80wwks0c4goo84k4gcs8kks-101105540855
+      - coolify.resourceName=runtimemafiatemplenamemain-k80wwks0c4goo84k4gcs8kks
+      - coolify.projectName=temporary-deployments
+      - coolify.serviceName=runtimemafiatemplenamemain-k80wwks0c4goo84k4gcs8kks
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.routers.http-catchall.entryPoints=web
+      - traefik.http.routers.http-catchall.rule=HostRegexp(`{subdomain:[a-z0-9]+}.000000108.xyz`)
+      - traefik.http.routers.http-catchall.middlewares=redirect-to-https
+      - traefik.http.routers.https-catchall.entryPoints=websecure
+      - traefik.http.routers.https-catchall.rule=HostRegexp(`{subdomain:[a-z0-9]+}.000000108.xyz`)
+      - traefik.http.routers.https-catchall.tls.certresolver=mydnschallenge
+      - traefik.http.routers.https-catchall.service=app-service
+      - traefik.http.services.app-service.loadbalancer.server.port=3000
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
