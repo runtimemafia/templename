@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 
+const validPaths = String(process.env.TEMPLE_VALID_PATHS).split(',').map(origin => origin.trim());
+const excludedSubdomains = String(process.env.TEMPLE_EXCLUDED_SUBDOMAINS).split(',').map(origin => origin.trim());
+
 export function middleware(request: NextRequest) {
-  console.log("Middleware triggered");
   const url = request.nextUrl;
-  console.log(url);
   const host = request.headers.get("host") || "";
   const subdomain = host.split(".")[0];
+  const path = url.pathname;
 
-  const excludedSubdomains = ["www", "bookmypuja.org", "dev"];
-
-  if (subdomain && !excludedSubdomains.includes(subdomain)) {
-    url.pathname = `/temple/${subdomain}`;
+  if (subdomain && !excludedSubdomains.includes(subdomain) && validPaths.includes(path)) {
+    url.pathname = `/temple/${subdomain}${path}`;
     return NextResponse.rewrite(url);
   }
 
