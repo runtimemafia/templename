@@ -1,0 +1,48 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/chunks/app/_not-found/page-166cc5574e2effea.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/css/f795f82d7cc47666.css",
+      "static/chunks/app/layout-5ab8b1c9cdbd34e2.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/chunks/970-ed962fb9b1b522b9.js",
+      "static/chunks/app/page-417301410d728e44.js"
+    ],
+    "/temple/[templeName]/contact/page": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/chunks/app/temple/[templeName]/contact/page-701db5c6309d4d68.js"
+    ],
+    "/temple/[templeName]/page": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/chunks/app/temple/[templeName]/page-73e1f5afb6f9fd94.js"
+    ],
+    "/temple/[templeName]/book/page": [
+      "static/chunks/webpack-e35b36d3638c2d3c.js",
+      "static/chunks/4bd1b696-80bcaf75e1b4285e.js",
+      "static/chunks/517-d083b552e04dead1.js",
+      "static/chunks/main-app-ee8dc12094716e3f.js",
+      "static/chunks/app/temple/[templeName]/book/page-11dfe2973b52a5fa.js"
+    ]
+  }
+}

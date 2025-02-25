@@ -1,0 +1,8 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/temple/[templeName]/contact/page": "app/temple/[templeName]/contact/page.js",
+  "/temple/[templeName]/page": "app/temple/[templeName]/page.js",
+  "/temple/[templeName]/book/page": "app/temple/[templeName]/book/page.js"
+}
