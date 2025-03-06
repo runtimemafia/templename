@@ -1,1 +1,0 @@
-This folder contains the built output assets for the worker "my-app" generated at 2025-02-26T09:59:09.479Z.
