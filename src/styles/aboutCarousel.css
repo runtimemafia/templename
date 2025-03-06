@@ -1,0 +1,127 @@
+/* @media (min-width: 992px) {
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 27px !important;
+    height: 27px !important;
+    background-color: #d9d9d9;
+    opacity: 0.8;
+    transition: background-color 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #9191fa;
+    opacity: 1;
+  }
+}
+
+For medium screens (md)
+@media (max-width: 991.98px) {
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 12px; 
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px !important;
+    height: 20px !important;
+    background-color: #d9d9d9;
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #9191fa;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px !important;
+    height: 11px !important;
+    background-color: #d9d9d9;
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #9191fa;
+    opacity: 1;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  margin-right: -8px;
+
+  gap: 1px;
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  background-color: #d9d9d9;
+  opacity: 0.7;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #9191fa;
+  opacity: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-in-out;
+}
+
+.animate-slide-out {
+  animation: slideOut 1s ease-in-out;
+} */

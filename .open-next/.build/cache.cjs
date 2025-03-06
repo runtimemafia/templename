@@ -1,4 +1,4 @@
-globalThis.disableIncrementalCache = false;globalThis.disableDynamoDBCache = false;globalThis.isNextAfter15 = true;globalThis.openNextDebug = false;globalThis.openNextVersion = "3.4.2";
+globalThis.disableIncrementalCache = false;globalThis.disableDynamoDBCache = false;globalThis.isNextAfter15 = false;globalThis.openNextDebug = false;globalThis.openNextVersion = "3.4.2";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -210,8 +210,10 @@ var Cache = class {
         return null;
       }
       const cacheData = cachedEntry?.value;
-      const requestId = globalThis.__openNextAls.getStore()?.requestId ?? "";
-      globalThis.lastModified[requestId] = _lastModified;
+      const store = globalThis.__openNextAls.getStore();
+      if (store) {
+        store.lastModified = _lastModified;
+      }
       if (cacheData?.type === "route") {
         return {
           lastModified: _lastModified,

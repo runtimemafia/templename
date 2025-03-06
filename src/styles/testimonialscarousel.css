@@ -1,0 +1,23 @@
+.custom-swiper .swiper-pagination-bullet {
+  background-color: #5c6574;
+  opacity: 0.7;
+  width: 9px !important;
+  height: 9px !important;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  background-color: #ffc107;
+  opacity: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 10px !important;
+}
+.custom-swiper .swiper-pagination {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}

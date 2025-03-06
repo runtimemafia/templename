@@ -1,0 +1,26 @@
+# https://bookmypuja.com/robots.txt
+User-agent: *
+Allow: /
+
+# Allow all bots to access static assets
+Allow: /public/
+Allow: /_next/static/
+Allow: /_next/image/
+
+# Important pages
+Allow: /homepage
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /blogs
+Allow: /temple-home
+
+# Sitemaps
+Sitemap: https://bookmypuja.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1
+
+# Block access to specific folders
+Disallow: /api/
+Disallow: /_next/

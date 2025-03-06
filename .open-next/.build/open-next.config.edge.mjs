@@ -46,11 +46,10 @@ function getCloudflareContextSync() {
   if (inSSG()) {
     throw new Error(`
 
-ERROR: \`getCloudflareContext\` has been called in a static route, that is not allowed, this can be solved in different ways:
-
- - call \`getCloudflareContext({async: true})\` to use the \`async\` mode
- - avoid calling \`getCloudflareContext\` in the route
- - make the route non static
+ERROR: \`getCloudflareContext\` has been called in sync mode in either a static route or at the top level of a non-static one, both cases are not allowed but can be solved by either:
+  - make sure that the call is not at the top level and that the route is not static
+  - call \`getCloudflareContext({async: true})\` to use the \`async\` mode
+  - avoid calling \`getCloudflareContext\` in the route
 `);
   }
   throw new Error(initOpenNextCloudflareForDevErrorMsg);
